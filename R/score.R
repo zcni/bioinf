@@ -1,0 +1,8 @@
+chinese<-c(78,67,89)
+math<-c(89,84,91)
+english<-c(81,86,88)
+score<-data.frame(chinese,math,english)
+row.names(score)<-c("Bob","Jay","Tom")
+score1<-t(score)
+score2<-as.matrix(score1)
+barplot(score2,horiz=FALSE,beside=TRUE,legend.text=c("chinese","math","english"),xlab="student",ylab="score",col=c("red","blue","yellow"))
